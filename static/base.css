@@ -1,0 +1,107 @@
+body
+{
+    margin: 0 auto;
+    padding: 0;
+    background-image: url('onerepublic01.jpg');
+    background-size: 100%;
+    background-attachment: scroll;
+    background-position: top left;
+    font-weight: bold;
+}
+
+#myMain
+{
+    position: relative;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.myBody
+{
+    position: relative;
+    z-index: 1;
+    padding: 13px;
+    color: red;
+    font-family: Arial, serif;
+    font-size: 20px;
+}
+
+.myHeader
+{
+    margin: 0 auto;
+    position: relative;
+    z-index:0;
+}
+
+#mainHeading
+{
+    margin: 10px;
+    padding: 10px;
+}
+
+.myNav
+{
+    height: 30px;
+    z-index: 100;
+}
+
+.myMenu, .myMenu ul
+{
+    margin: 3px;
+    padding: 3px;
+    border: 3px;
+    display: block;
+}
+
+.myMenu li
+{
+    color: red;
+    margin: 3px;
+    padding: 3px;
+    border: 3px;
+    display: block;
+    float: left;
+    position: relative;
+    z-index: 5;
+}
+
+.myMenu a
+{
+    color: red;
+    margin: 3px;
+    padding: 3px;
+    border: 3px;
+    display: block;
+    float: right;
+    position: relative;
+    z-index: 5;
+    text-decoration: none;
+}
+
+.myContentLayout
+{
+    position: relative;
+    margin: 3px;
+    padding: 3px;
+    border: 3px;
+    text-align: center;
+}
+
+.myFooter
+{
+    position:relative;
+    z-index:0;
+    overflow:hidden;
+    margin: 3px auto 0 auto;
+}
+
+.myFooter .myFooter-text p
+{
+    margin: 5px;
+}
+
+.myFooter .myFooter-text
+{
+    font-size: 15px;
+}

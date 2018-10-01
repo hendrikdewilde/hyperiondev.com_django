@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+{% block additional_head %} {% endblock %}
+{% block header %}News{% endblock %}
+{% block menu %}
+    <div class="myNav">
+        <ul class="myMenu">
+            <li>
+                <a href="{% url 'web_index' %}">Home</a>
+            </li>
+            <li>
+                <a href="{% url 'web_charity' %}">Charity</a>
+            </li>
+            <li>
+                <a href="{% url 'news_index' %}">News</a>
+            </li>
+            <li>
+                <a href="{% url 'tour_index' %}">Tour</a>
+            </li>
+        </ul>
+    </div>
+{% endblock %}
+{% block detail %}
+    <h2>Enter email address to get monthly news letter: </h2>
+    <form method="post" action="{% url 'news_index' %}" >
+        {% csrf_token %}
+            {% autoescape off%}
+                {{ form }}
+            {% endautoescape %}
+            <input type="submit" value="Add" class="myButton">
+
+    </form>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+    <br>
+    <h2>Latest News:</h2>
+    {% for news in news_list %}
+        <h3>{{ news.heading }} : {{ news.add_date|date:"Y-m-d" }}</h3>
+        <p>{{ news.article }}</p>
+        <br>
+        <br>
+    {% endfor %}
+    <br>
+    <br>
+{% endblock %}
+
+
